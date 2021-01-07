@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body class="">
+  <div class="main-app">
+    <header>
+      <a href="#" class="navbar-title">
+        <img src="https://i.imgur.com/jPRZsVR.png" id="logoA" alt="alpha-logo">
+      </a>
+      <input type="checkbox" class="navbar-toggle" id="navbar-toggle">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              男款
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              女款
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              最新消息
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              客製商品
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              聯絡我們
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-btn-list">
+          <li class="nav-btn cursor-pointer">
+            <img src="https://i.imgur.com/N8Ulmba.png" alt="search_icon">
+          </li>
+          <li class="nav-btn cursor-pointer">
+            <img src="https://i.imgur.com/DBzmtYm.png" alt="cart_icon">
+          </li>
+          <li class="nav-btn cursor-pointer">
+            <img src="https://i.imgur.com/owKikco.png" class="modeColor" alt="vector_icon">
+          </li>
+        </ul>
+      </nav>
+      <label class="navbar-toggle-label cursor-pointer" for="navbar-toggle">
+        <img src="https://i.imgur.com/dExgpgU.png" alt="hamburger">
+      </label>
+    </header>
+
+    <div class="main-content">
+      <div class="container form-container">
+        <form id="a-form">
+          <div class="form-content">
+            <div class="form-order">
+              <div class="step-panel" id="step-control">
+                <div class="container stepper-container">
+                  <h2 class="step-content-title">結帳</h2>
+                  <div class="step-wrapper">
+                    <div class="step active">
+                      <div class="circle-container"></div>
+                      <div class="label-container">寄送地址</div>
+                    </div>
+                    <div class="step ">
+                      <div class="circle-container"></div>
+                      <div class="label-container">運送方式</div>
+                      <span class="connect-line"></span>
+                    </div>
+                    <div class="step ">
+                      <div class="circle-container"></div>
+                      <div class="label-container">付款資訊</div>
+                      <span class="connect-line"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="part ">
+                <h3 class="part-title">寄送地址</h3>
+                <div class="part-row title-part-row">
+                  <div class="form-row title-row"><label>稱謂</label>
+                    <div class="select-wrapper">
+                      <select name="a-type" id="a-type">
+                        <option value="male" selected>先生</option>
+                        <option value="female">女士</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row full-name">
+                    <label for="">姓名</label>
+                    <input id="full-name" type="text" placeholder="請輸入姓名">
+                  </div>
+                </div>
+                <div class="part-row">
+                  <div class="form-row phone-row">
+                    <label for="">電話</label>
+                    <input id="phone-nums" type="text" placeholder="請輸入行動電話">
+                  </div>
+                  <div class="form-row email-row">
+                    <label for="">Email</label>
+                    <input id="email" type="text" placeholder="請輸入電子郵件">
+                  </div>
+                </div>
+                <div class="part-row">
+                  <div class="form-row city-row"><label>縣市</label>
+                    <div class="select-wrapper">
+                      <select name="a-type" id="a-location" required>
+                        <option value="" disabled selected>請選擇縣市</option>
+                        <option value="">台北市</option>
+                        <option value="">新北市</option>
+                        <option value="">基隆市</option>
+                        <option value="">桃園市</option>
+                        <option value="">新竹市</option>
+                        <option value="">新竹縣</option>
+                        <option value="">苗栗縣</option>
+                        <option value="">台中市</option>
+                        <option value="">彰化縣</option>
+                        <option value="">南投縣</option>
+                        <option value="">雲林縣</option>
+                        <option value="">嘉義縣</option>
+                        <option value="">台南市</option>
+                        <option value="">高雄市</option>
+                        <option value="">屏東縣</option>
+                        <option value="">宜蘭縣</option>
+                        <option value="">花蓮縣</option>
+                        <option value="">台東縣</option>
+                        <option value="">澎湖縣</option>
+                        <option value="">金門縣</option>
+                        <option value="">連江縣</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row address-row">
+                    <label for="">地址</label>
+                    <input id="address" type="text" placeholder="請輸入地址">
+                  </div>
+                </div>
+              </div>
+              <div class="part d-none">
+                <h3 class="part-title">運送方式</h3>
+                <div class="form-row" id="shipping-fee">
+                  <div class="shipping-way">
+                    <input id="common" name="shipping" type="radio" value="common" checked>
+                    <label class="ship-item" for="common">
+                      <div class="circle-icon"></div>
+                      <div class="shipping-type">
+                        <p class="type-title">標準運送</p>
+                        <p class="delivery">約3~7個工作天</p>
+                      </div>
+                      <div class="shipping-fee">
+                        免費
+                      </div>
+                    </label>
+                  </div>
+                  <div class="shipping-way">
+                    <input id="dhl" name="shipping" type="radio" value="dhl">
+                    <label class="ship-item mark2" for="dhl">
+                      <div class="circle-icon"></div>
+                      <div class="shipping-type">
+                        <p class="type-title">DHL貨運</p>
+                        <p class="delivery">48小時內送達</p>
+                      </div>
+                      <div class="shipping-fee">
+                        $500
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="part d-none">
+                <h3 class="part-title">付款資訊</h3>
+                <div class="form-row"><label for="">持卡人姓名</label>
+                  <input id="card-name" type="text" placeholder="Nono Lin">
+                </div>
+                <div class="form-row"><label for="">卡號</label>
+                  <input id="card-number" type="text" placeholder="1111 2222 3333 4444">
+                </div>
+                <div class="card-wrapper">
+                  <div class="form-row">
+                    <label for="">有效期限</label>
+                    <input id="card-time" type="text" placeholder="MM/YY">
+                  </div>
+                  <div class="form-row">
+                    <label for="">CVC/CCV</label>
+                    <input id="card-code" type="text" placeholder="123">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-cart" id="cart-order">
+              <h5 class="cart-title">購物籃</h5>
+              <div class="cart-item">
+                <img src="https://i.imgur.com/Y2S4rJV.jpg" alt="p-1">
+                <div class="cart-info">
+                  <div class="cart-info-left">
+                    <div class="goods-title">破壞補釘修身牛仔褲</div>
+                    <div class="goods-quantity d-flex">
+                      <span class="goods-loss">
+                        <img src="https://i.imgur.com/lOVMFIV.png" alt="minus"></span>
+                      <div class="goods-count">1</div>
+                      <span class="goods-add"><img src="https://i.imgur.com/eFfNHyW.png" alt="plus"></span>
+                    </div>
+                  </div>
+                  <div class="cart-info-right">
+                    $ <span class="goods-price">3999</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item">
+                <img src="https://i.imgur.com/Y3g1X9N.jpg" alt="p-2">
+                <div class="cart-info">
+                  <div class="cart-info-left">
+                    <div class="goods-title">刷色直筒牛仔褲</div>
+                    <div class="goods-quantity d-flex">
+                      <span class="goods-loss"><img src="https://i.imgur.com/lOVMFIV.png" alt="minus">
+
+                      </span>
+                      <div class="goods-count">1</div>
+                      <span class="goods-add"><img src="https://i.imgur.com/eFfNHyW.png" alt="plus"></span>
+                    </div>
+                  </div>
+                  <div class="cart-info-right">
+                    $ <span class="goods-price">1299</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-charge">
+                <div class="charge-fee">運費</div>
+                <div class="charge-type" id="charge-type"></div>
+              </div>
+              <div class="cart-amount">
+                <div class="amount-title">小計</div>
+                <div class="amount-total" id="amount-total">$ </div>
+              </div>
+            </div>
+          </div>
+          <div id="btn-control" class="control-panel">
+            <button disabled class="btn btn-outline">← 上一步</button>
+            <button class="btn btn-pink">下一步 →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a class="footer-title">
+      <img src="https://i.imgur.com/jPRZsVR.png" id="logoB" alt="footer-logo">
+    </a>
+    <div class="footer-info-list">
+      <div class="footer-info-part">
+        <h4 class="footer-info-title">客戶服務</h4>
+        <ul class="footer-item">
+          <li><a href="#">運送說明</a></li>
+          <li><a href="#">退換貨相關</a></li>
+          <li><a href="#">付款資訊</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-info-part">
+        <h4 class="footer-info-title">關於我們</h4>
+        <ul class="footer-item">
+          <li><a href="#">品牌故事</a></li>
+          <li><a href="#">媒體聯繫</a></li>
+          <li><a href="#">Press kit</a></li>
+        </ul>
+      </div>
+      <div class="footer-info-part">
+        <h4 class="footer-info-title">資訊</h4>
+        <ul class="footer-item">
+          <li><a href="#">隱私權資訊</a></li>
+          <li><a href="#">Cookie</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
+      </div>
+      <div class="footer-info-follow">
+        <h4 class="footer-info-title">追蹤ALPHA SHOP</h4>
+        <ul class="footer-item">
+          <li><a>+886 02123-45678</a></li>
+          <li class="footer-icon-wrapper d-flex">
+            <a href="#">
+              <img src="https://i.imgur.com/Df9yo8v.png" alt="fb_icon">
+            </a>
+            <a href="#">
+              <img src="https://i.imgur.com/vEa1oQO.png" alt="ig_icon">
+            </a>
+            <a href="#">
+              <img src="https://i.imgur.com/bpYq4ib.png" alt="tell_icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
